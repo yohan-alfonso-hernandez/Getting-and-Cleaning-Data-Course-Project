@@ -49,23 +49,23 @@ y_train <- read.table("UCI HAR Dataset/train/y_train.txt", col.names = "code")
 # > head(features)
 #    n         functions
 
-# 1 1 tBodyAcc-mean()-X
-# 2 2 tBodyAcc-mean()-Y
-# 3 3 tBodyAcc-mean()-Z
-# 4 4  tBodyAcc-std()-X
-# 5 5  tBodyAcc-std()-Y
-# 6 6  tBodyAcc-std()-Z
+# 1 tBodyAcc-mean()-X
+# 2 tBodyAcc-mean()-Y
+# 3 tBodyAcc-mean()-Z
+# 4 tBodyAcc-std()-X
+# 5 tBodyAcc-std()-Y
+# 6 tBodyAcc-std()-Z
 
 
 # > head(activities)
-#      code         activity
+# code   activity
 
-# 1    1            WALKING
-# 2    2   WALKING_UPSTAIRS
-# 3    3 WALKING_DOWNSTAIRS
-# 4    4            SITTING
-# 5    5           STANDING
-# 6    6             LAYING
+# 1      WALKING
+# 2      WALKING_UPSTAIRS
+# 3      WALKING_DOWNSTAIRS
+# 4      SITTING
+# 5      STANDING
+# 6      LAYING
 
 
 1 part Merges the training and the test sets to create one data set.
