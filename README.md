@@ -9,10 +9,10 @@ Files:
 Code book (CodeBook.md) that describes the data and transformations performed to clean up the data
 run_analysis.R performs the data preparation and trnsformation  steps required as described in the course project’s definition:
 
-###first prepare the dta downloaded
+### first prepare the dta downloaded
 
 
-#----- set working directory
+## set working directory
 
 ## setwd("C:\\Users\\Yohan\\Pictures\\Yohan\\Data sciece\\Getting data and cleanning data\\semana4\\Getting and Cleaning Data Course Project")
 
@@ -44,28 +44,28 @@ y_test <- read.table("UCI HAR Dataset/test/y_test.txt", col.names = "code")
 x_train <- read.table("UCI HAR Dataset/train/X_train.txt", col.names = features$functions)
 y_train <- read.table("UCI HAR Dataset/train/y_train.txt", col.names = "code")
 
-###-------   a  glance to features and activities data frames
+##  a  glance to features and activities data frames
 
 > head(features)
- ##n         functions
+ #n         functions
 
- ##1 tBodyAcc-mean()-X
- ##2 tBodyAcc-mean()-Y
- ##3 tBodyAcc-mean()-Z
- ##4 tBodyAcc-std()-X
- ##5 tBodyAcc-std()-Y
- ##6 tBodyAcc-std()-Z
+ #1 tBodyAcc-mean()-X
+ #2 tBodyAcc-mean()-Y
+ #3 tBodyAcc-mean()-Z
+ #4 tBodyAcc-std()-X
+ #5 tBodyAcc-std()-Y
+ #6 tBodyAcc-std()-Z
 
 
  > head(activities)
- ##code   activity
+ #code   activity
 
- ##1      WALKING
- ##2      WALKING_UPSTAIRS
- ##3      WALKING_DOWNSTAIRS
- ##4      SITTING
- ##5      STANDING
- ##6      LAYING
+ #1      WALKING
+ #2      WALKING_UPSTAIRS
+ #3      WALKING_DOWNSTAIRS
+ #4      SITTING
+ #5      STANDING
+ #6      LAYING
 
 
 ### 1 part Merges the training and the test sets to create one data set.
