@@ -9,12 +9,12 @@ Files:
 Code book (CodeBook.md) that describes the data and transformations performed to clean up the data
 run_analysis.R performs the data preparation and trnsformation  steps required as described in the course project’s definition:
 
-### first prepare the dta downloaded
+### first prepare the data downloaded
 
 
 ## set working directory
 
-## setwd("C:\\Users\\Yohan\\Pictures\\Yohan\\Data sciece\\Getting data and cleanning data\\semana4\\Getting and Cleaning Data Course Project")
+# setwd("C:\\Users\\Yohan\\Pictures\\Yohan\\Data sciece\\Getting data and cleanning data\\semana4\\Getting and Cleaning Data Course Project")
 
 
 ### Download files to local repository
@@ -25,8 +25,9 @@ unzip(file)
 
 
 What it's done after is prepare de data frames to work with
-load library
+
 library(dplyr)
+
 
 ### Assigning dataframes
 
