@@ -14,7 +14,7 @@ run_analysis.R performs the data preparation and trnsformation  steps required a
 
 #----- set working directory
 
-# setwd("C:\\Users\\Yohan\\Pictures\\Yohan\\Data sciece\\Getting data and cleanning data\\semana4\\Getting and Cleaning Data Course Project")
+## setwd("C:\\Users\\Yohan\\Pictures\\Yohan\\Data sciece\\Getting data and cleanning data\\semana4\\Getting and Cleaning Data Course Project")
 
 
 ### Download files to local repository
