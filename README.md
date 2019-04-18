@@ -14,7 +14,7 @@ run_analysis.R performs the data preparation and trnsformation  steps required a
 
 ## set working directory
 
-# setwd("C:\\Users\\Yohan\\Pictures\\Yohan\\Data sciece\\Getting data and cleanning data\\semana4\\Getting and Cleaning Data Course Project")
+setwd("C:\\Users\\Yohan\\Pictures\\Yohan\\Data sciece\\Getting data and cleanning data\\semana4\\Getting and Cleaning Data Course Project")
 
 
 ### Download files to local repository
@@ -49,7 +49,6 @@ y_train <- read.table("UCI HAR Dataset/train/y_train.txt", col.names = "code")
 
 > head(features)
  #n         functions
-
  #1 tBodyAcc-mean()-X
  #2 tBodyAcc-mean()-Y
  #3 tBodyAcc-mean()-Z
@@ -58,9 +57,8 @@ y_train <- read.table("UCI HAR Dataset/train/y_train.txt", col.names = "code")
  #6 tBodyAcc-std()-Z
 
 
- > head(activities)
+ >head(activities)
  #code   activity
-
  #1      WALKING
  #2      WALKING_UPSTAIRS
  #3      WALKING_DOWNSTAIRS
