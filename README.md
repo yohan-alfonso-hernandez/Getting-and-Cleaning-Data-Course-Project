@@ -47,45 +47,45 @@ y_train <- read.table("UCI HAR Dataset/train/y_train.txt", col.names = "code")
 ###-------   a  glance to features and activities data frames
 
 > head(features)
- n         functions
+ #n         functions
 
- 1 tBodyAcc-mean()-X
- 2 tBodyAcc-mean()-Y
- 3 tBodyAcc-mean()-Z
- 4 tBodyAcc-std()-X
- 5 tBodyAcc-std()-Y
- 6 tBodyAcc-std()-Z
+ #1 tBodyAcc-mean()-X
+ #2 tBodyAcc-mean()-Y
+ #3 tBodyAcc-mean()-Z
+ #4 tBodyAcc-std()-X
+ #5 tBodyAcc-std()-Y
+ #6 tBodyAcc-std()-Z
 
 
  > head(activities)
- code   activity
+ #code   activity
 
- 1      WALKING
- 2      WALKING_UPSTAIRS
- 3      WALKING_DOWNSTAIRS
- 4      SITTING
- 5      STANDING
- 6      LAYING
+ #1      WALKING
+ #2      WALKING_UPSTAIRS
+ #3      WALKING_DOWNSTAIRS
+ #4      SITTING
+ #5      STANDING
+ #6      LAYING
 
 
-###1 part Merges the training and the test sets to create one data set.
+### 1 part Merges the training and the test sets to create one data set.
 
 X <- rbind(x_train, x_test)                     # rbind makes one data.table from a list 
 Y <- rbind(y_train, y_test)
 Subject <- rbind(subject_train, subject_test)
 MergedData <- cbind(Subject, Y, X)              # Merge data Combining Objects Y and X  by Rows or Columns with cbind
 
-###2 part Extracts only the measurements on the mean and standard deviation for each measurement.
+### 2 part Extracts only the measurements on the mean and standard deviation for each measurement.
 
 TidyData <- MergedData %>% select(subject, code, contains("mean"), contains("std"))   # Select data that constains the word mean amd std
 
 
-###3 part Uses descriptive activity names to name the activities in the data set
+### 3 part Uses descriptive activity names to name the activities in the data set
 
 TidyData$code <- activities[TidyData$code, 2]     # segregate  names of activities
 
 
-###4 part Appropriately labels the data set with descriptive variable names. 
+### 4 part Appropriately labels the data set with descriptive variable names. 
 
 names(TidyData)[2] = "activities"
 names(TidyData)<-gsub("Acc", "Accelerometer", names(TidyData))          #  use gsub to change the names of the columns to a representative one
@@ -101,7 +101,7 @@ names(TidyData)<-gsub("-freq()", "Frequency", names(TidyData), ignore.case = TRU
 names(TidyData)<-gsub("angle", "Angle", names(TidyData))
 names(TidyData)<-gsub("gravity", "Gravity", names(TidyData))
 
-###5 part  From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
+### 5 part  From the data set in step 4, creates a second, independent tidy data set with the average of each variable for each activity and each subject.
 
 AvgData <- TidyData %>%
         group_by(subject, activities) %>%               # group  subjectas and activities
