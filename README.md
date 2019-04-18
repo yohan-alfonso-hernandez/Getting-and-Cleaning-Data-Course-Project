@@ -45,16 +45,16 @@ y_test <- read.table("UCI HAR Dataset/test/y_test.txt", col.names = "code")
 x_train <- read.table("UCI HAR Dataset/train/X_train.txt", col.names = features$functions)
 y_train <- read.table("UCI HAR Dataset/train/y_train.txt", col.names = "code")
 
-##  a  glance to features and activities data frames
+##  A  glance to features and activities data frames
 
 > head(features)
  # n         functions
- 1 tBodyAcc-mean()-X
- 2 tBodyAcc-mean()-Y
- 3 tBodyAcc-mean()-Z
- 4 tBodyAcc-std()-X
- 5 tBodyAcc-std()-Y
- 6 tBodyAcc-std()-Z
+ -1 tBodyAcc-mean()-X
+ -2 tBodyAcc-mean()-Y
+ -3 tBodyAcc-mean()-Z
+ -4 tBodyAcc-std()-X
+ -5 tBodyAcc-std()-Y
+ -6 tBodyAcc-std()-Z
 
 
  >head(activities)
